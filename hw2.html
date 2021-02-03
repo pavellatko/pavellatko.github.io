@@ -14753,25 +14753,62 @@ a.anchor-link {
 <p>Выполним следующий код в pymol (т.к. у меня не заработал модуль pymol для python)</p>
 
 </div>
-</div>python
-phi = 74 
-psi = -174.43
-omega = -2.2
-cmd.delete('all')
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;python</span>
+<span class="sd">phi = 74 </span>
+<span class="sd">psi = -174.43</span>
+<span class="sd">omega = -2.2</span>
+<span class="sd">cmd.delete(&#39;all&#39;)</span>
 
-cmd.fragment('ala', 'ala')
-cmd.edit('ala///ALA`2/N', 'ala///ALA`2/CA')
-cmd.torsion(phi)
-for i in range(2, 102):
-    cmd.edit('ala///ALA`{}/C'.format(i))
-    editor.attach_amino_acid("pk1", "ala")
-    cmd.edit('ala///ALA`{}/CA'.format(i), 'ala///ALA`{}/C'.format(i))
-    cmd.torsion(psi)
-    cmd.edit('ala///ALA`{}/C'.format(i), 'ala///ALA`{}/N'.format(i+1))
-    cmd.torsion(omega)
-    cmd.edit('ala///ALA`{}/N'.format(i+1), 'ala///ALA`{}/CA'.format(i+1))
-    cmd.torsion(phi)
-python end<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<span class="sd">cmd.fragment(&#39;ala&#39;, &#39;ala&#39;)</span>
+<span class="sd">cmd.edit(&#39;ala///ALA`2/N&#39;, &#39;ala///ALA`2/CA&#39;)</span>
+<span class="sd">cmd.torsion(phi)</span>
+<span class="sd">for i in range(2, 102):</span>
+<span class="sd">    cmd.edit(&#39;ala///ALA`{}/C&#39;.format(i))</span>
+<span class="sd">    editor.attach_amino_acid(&quot;pk1&quot;, &quot;ala&quot;)</span>
+<span class="sd">    cmd.edit(&#39;ala///ALA`{}/CA&#39;.format(i), &#39;ala///ALA`{}/C&#39;.format(i))</span>
+<span class="sd">    cmd.torsion(psi)</span>
+<span class="sd">    cmd.edit(&#39;ala///ALA`{}/C&#39;.format(i), &#39;ala///ALA`{}/N&#39;.format(i+1))</span>
+<span class="sd">    cmd.torsion(omega)</span>
+<span class="sd">    cmd.edit(&#39;ala///ALA`{}/N&#39;.format(i+1), &#39;ala///ALA`{}/CA&#39;.format(i+1))</span>
+<span class="sd">    cmd.torsion(phi)</span>
+<span class="sd">python end&#39;&#39;&#39;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;python\nphi = 74 \npsi = -174.43\nomega = -2.2\ncmd.delete(\&#39;all\&#39;)\n\ncmd.fragment(\&#39;ala\&#39;, \&#39;ala\&#39;)\ncmd.edit(\&#39;ala///ALA`2/N\&#39;, \&#39;ala///ALA`2/CA\&#39;)\ncmd.torsion(phi)\nfor i in range(2, 102):\n    cmd.edit(\&#39;ala///ALA`{}/C\&#39;.format(i))\n    editor.attach_amino_acid(&#34;pk1&#34;, &#34;ala&#34;)\n    cmd.edit(\&#39;ala///ALA`{}/CA\&#39;.format(i), \&#39;ala///ALA`{}/C\&#39;.format(i))\n    cmd.torsion(psi)\n    cmd.edit(\&#39;ala///ALA`{}/C\&#39;.format(i), \&#39;ala///ALA`{}/N\&#39;.format(i+1))\n    cmd.torsion(omega)\n    cmd.edit(\&#39;ala///ALA`{}/N\&#39;.format(i+1), \&#39;ala///ALA`{}/CA\&#39;.format(i+1))\n    cmd.torsion(phi)\npython end&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
